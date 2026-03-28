@@ -1,197 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tupic — Own Every Moment</title>
-    <meta name="description" content="Own Every Moment. Live it. Own it with Tupic.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #08080f;
-            --text: #e8eaed;
-            --text-soft: #9aa0a6;
-            --text-muted: #5f6368;
-            --accent: #818cf8;
-            --accent-dim: rgba(129, 140, 248, 0.08);
-            --font-display: 'Outfit', sans-serif;
-            --font-body: 'DM Sans', sans-serif;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        html, body {
-            height: 100%;
-            font-family: var(--font-body);
-            background: var(--bg);
-            color: var(--text);
-            overflow: hidden;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* subtle radial warmth */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 30%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, rgba(129, 140, 248, 0.04) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .page {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        /* ═══ TOP BAR ═══ */
-        .topbar {
-            position: absolute;
-            top: 1.5rem;
-            right: 2rem;
-            animation: fadeIn 1s ease 0.9s forwards;
-            opacity: 0;
-        }
-
-        .center-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* ═══ LOGO ═══ */
-        .logo {
-            font-family: var(--font-display);
-            font-size: clamp(3.5rem, 8vw, 5.5rem);
-            font-weight: 800;
-            letter-spacing: -3px;
-            color: var(--text);
-            margin-bottom: 1.75rem;
-            animation: fadeIn 1s ease forwards;
-            opacity: 0;
-        }
-        .logo span {
-            color: var(--accent);
-        }
-
-        /* ═══ TAGLINE ═══ */
-        .tagline {
-            font-family: var(--font-display);
-            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-            font-weight: 400;
-            color: var(--text);
-            letter-spacing: 0.5px;
-            margin-bottom: 0.6rem;
-            animation: fadeIn 1s ease 0.3s forwards;
-            opacity: 0;
-        }
-
-        .subtitle {
-            font-family: var(--font-body);
-            font-size: clamp(0.8rem, 1.3vw, 0.95rem);
-            font-weight: 300;
-            color: var(--text-muted);
-            letter-spacing: 1px;
-            text-transform: lowercase;
-            margin-bottom: 0;
-            animation: fadeIn 1s ease 0.6s forwards;
-            opacity: 0;
-        }
-
-        /* ═══ TOP LINK ═══ */
-        .toplink {
-            font-family: var(--font-display);
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--text);
-            text-decoration: none;
-            letter-spacing: 0.5px;
-            padding: 0.45rem 1.1rem;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 100px;
-            border: none;
-            transition: all 0.3s;
-        }
-        .toplink:hover {
-            background: rgba(255, 255, 255, 0.07);
-        }
-
-        /* ═══ FOOTER ═══ */
-        .footer {
-            position: absolute;
-            bottom: 2rem;
-            display: flex;
-            gap: 2rem;
-            animation: fadeIn 1s ease 1.2s forwards;
-            opacity: 0;
-        }
-        .footer a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.75rem;
-            font-weight: 400;
-            letter-spacing: 0.5px;
-            transition: color 0.2s;
-        }
-        .footer a:hover {
-            color: var(--text-soft);
-        }
-
-        /* ═══ ANIMATION ═══ */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(12px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* ═══ RESPONSIVE ═══ */
-        @media (max-width: 480px) {
-            .topbar { top: 1rem; right: 1.25rem; }
-            .logo { letter-spacing: -2px; }
-            .tagline { font-size: 1.05rem; }
-            .subtitle { font-size: 0.8rem; }
-            .footer {
-                gap: 0.75rem 1.25rem;
-                flex-wrap: wrap;
-                justify-content: center;
-                max-width: 280px;
-                bottom: 1.5rem;
-            }
-            .footer a { font-size: 0.7rem; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tupic — Own Every Moment</title>
+  <meta name="description" content="Own Every Moment. Live it. Own it with Tupic.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" crossorigin href="./assets/index-CztBhWt_.css">
 </head>
-<body>
+<body class="h-screen overflow-hidden antialiased">
 
-<div class="page">
-    <!-- Top bar with Explore button -->
-    <div class="topbar">
-        <a href="#" class="toplink">Step In</a>
+  <!-- Subtle radial glow -->
+  <div class="glow fixed top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] pointer-events-none"></div>
+
+  <div class="h-full flex flex-col items-center justify-center relative">
+
+    <!-- Top bar -->
+    <div class="absolute top-6 right-8 max-[480px]:top-4 max-[480px]:right-5 fade-3">
+      <a href="#" class="toplink font-display text-sm font-medium text-[var(--fg)] no-underline tracking-wide px-[1.1rem] py-[0.45rem] rounded-full">
+        Step In
+      </a>
     </div>
 
-    <div class="center-content">
-        <div class="logo">tupic<span>.</span></div>
-        <div class="tagline">Own Every Moment</div>
-        <div class="subtitle">Live it. Own it.</div>
+    <!-- Center content -->
+    <div class="flex flex-col items-center">
+      <div class="font-display text-[clamp(3.5rem,8vw,5.5rem)] font-extrabold tracking-[-3px] text-[var(--fg)] mb-7 fade-0 max-[480px]:tracking-[-2px]">
+        tupic<span class="text-[var(--accent)]">.</span>
+      </div>
+      <div class="font-display text-[clamp(1.1rem,2.5vw,1.5rem)] font-normal text-[var(--fg)] tracking-[0.5px] mb-2 fade-1 max-[480px]:text-[1.05rem]">
+        Own Every Moment
+      </div>
+      <div class="text-[clamp(0.8rem,1.3vw,0.95rem)] font-light text-[var(--fg-muted)] tracking-[1px] lowercase fade-2">
+        Live it. Own it.
+      </div>
     </div>
 
-    <div class="footer">
-        <a href="https://chain.tupic.com" target="_blank">Chain</a>
-        <a href="https://insight.tupic.com" target="_blank">Insight</a>
-        <a href="https://tag.tupic.com" target="_blank">Tag</a>
-        <a href="https://game.tupic.com" target="_blank">Game</a>
-        <a href="#">Live</a>
-        <a href="https://tupicfinance.com" target="_blank">Finance</a>
-        <a href="https://tupic.org" target="_blank">ORG</a>
+    <!-- Footer -->
+    <div class="absolute bottom-8 flex gap-8 fade-4 max-[480px]:bottom-6 max-[480px]:gap-x-5 max-[480px]:gap-y-3 max-[480px]:flex-wrap max-[480px]:justify-center max-[480px]:max-w-[280px]">
+      <a href="https://chain.tupic.com" target="_blank" class="text-[var(--fg-muted)] no-underline text-xs tracking-[0.5px] hover:text-[var(--fg-soft)] transition-colors duration-200">Chain</a>
+      <a href="https://insight.tupic.com" target="_blank" class="text-[var(--fg-muted)] no-underline text-xs tracking-[0.5px] hover:text-[var(--fg-soft)] transition-colors duration-200">Insight</a>
+      <a href="https://tag.tupic.com" target="_blank" class="text-[var(--fg-muted)] no-underline text-xs tracking-[0.5px] hover:text-[var(--fg-soft)] transition-colors duration-200">Tag</a>
+      <a href="https://game.tupic.com" target="_blank" class="text-[var(--fg-muted)] no-underline text-xs tracking-[0.5px] hover:text-[var(--fg-soft)] transition-colors duration-200">Game</a>
+      <a href="https://live.tupic.com" class="text-[var(--fg-muted)] no-underline text-xs tracking-[0.5px] hover:text-[var(--fg-soft)] transition-colors duration-200">Live</a>
+      <a href="https://finance.tupic.com" target="_blank" class="text-[var(--fg-muted)] no-underline text-xs tracking-[0.5px] hover:text-[var(--fg-soft)] transition-colors duration-200">Finance</a>
+      <a href="https://tupic.org" target="_blank" class="text-[var(--fg-muted)] no-underline text-xs tracking-[0.5px] hover:text-[var(--fg-soft)] transition-colors duration-200">ORG</a>
     </div>
-</div>
+
+  </div>
 
 </body>
 </html>

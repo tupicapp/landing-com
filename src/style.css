@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Outfit', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+/* === Dark theme (default) === */
+:root {
+  --bg: #08080f;
+  --fg: #e8eaed;
+  --fg-soft: #9aa0a6;
+  --fg-muted: #5f6368;
+  --accent: #818cf8;
+  --glow-color: rgba(129, 140, 248, 0.04);
+  --btn-bg: rgba(255, 255, 255, 0.03);
+  --btn-hover-bg: rgba(255, 255, 255, 0.07);
+  --btn-border: transparent;
+}
+
+/* === Light theme (system preference) === */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f8f9fa;
+    --fg: #0f0f1a;
+    --fg-soft: #4b5563;
+    --fg-muted: #9ca3af;
+    --accent: #6366f1;
+    --glow-color: rgba(99, 102, 241, 0.07);
+    --btn-bg: #ffffff;
+    --btn-hover-bg: #f3f4f6;
+    --btn-border: #e5e7eb;
+  }
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--fg);
+  }
+}
+
+.glow {
+  background: radial-gradient(circle, var(--glow-color) 0%, transparent 70%);
+}
+
+.toplink {
+  background: var(--btn-bg);
+  border: 1px solid var(--btn-border);
+  transition: background 0.3s;
+}
+.toplink:hover {
+  background: var(--btn-hover-bg);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-0 { animation: fadeIn 1s ease forwards;        opacity: 0; }
+.fade-1 { animation: fadeIn 1s ease 0.3s forwards;   opacity: 0; }
+.fade-2 { animation: fadeIn 1s ease 0.6s forwards;   opacity: 0; }
+.fade-3 { animation: fadeIn 1s ease 0.9s forwards;   opacity: 0; }
+.fade-4 { animation: fadeIn 1s ease 1.2s forwards;   opacity: 0; }
