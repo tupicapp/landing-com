@@ -1,4 +1,4 @@
-import"./main-DDLJmxo6.js";const o=`
+import"./main-DLdIo1ZJ.js";const o=`
 <h2>1. Introduction</h2>
 
 <p>This Privacy Policy explains how TUPIC collects, uses, stores, protects, shares, transfers, retains, and otherwise processes personal data when you access, register for, browse, download, use, connect to, integrate with, participate in, or otherwise interact with any part of the TUPIC ecosystem.</p>

@@ -1,4 +1,4 @@
-import"./main-DDLJmxo6.js";const o=`
+import"./main-DLdIo1ZJ.js";const o=`
 <h2>1. Introduction</h2>
 
 <p>These Terms and Conditions (the “Terms”) govern access to and use of the TUPIC ecosystem, including the TUPIC website, platform, applications, products, content, tools, technologies, and related services made available by Mirrage Image It Solutions.</p>

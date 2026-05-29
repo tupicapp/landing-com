@@ -7,6 +7,33 @@
   --font-body: 'Inter', sans-serif;
 }
 
+.home-page {
+  --font-body: 'DM Sans', sans-serif;
+  --bg: #08080f;
+  --fg: #e8eaed;
+  --fg-soft: #9aa0a6;
+  --fg-muted: #5f6368;
+  --accent: #818cf8;
+  --glow-color: rgba(129, 140, 248, 0.04);
+  --btn-bg: rgba(255, 255, 255, 0.03);
+  --btn-hover-bg: rgba(255, 255, 255, 0.07);
+  --btn-border: transparent;
+}
+
+@media (prefers-color-scheme: light) {
+  .home-page {
+    --bg: #f8f9fa;
+    --fg: #0f0f1a;
+    --fg-soft: #4b5563;
+    --fg-muted: #9ca3af;
+    --accent: #6366f1;
+    --glow-color: rgba(99, 102, 241, 0.07);
+    --btn-bg: #ffffff;
+    --btn-hover-bg: #f3f4f6;
+    --btn-border: #e5e7eb;
+  }
+}
+
 :root {
   color-scheme: dark light;
   --brand-primary: var(--service-chain);
@@ -66,6 +93,23 @@
 .toplink:hover {
   background: var(--btn-hover-bg);
   border-color: color-mix(in srgb, var(--brand-primary) 22%, var(--border-color));
+}
+
+.home-page .toplink {
+  display: inline-block;
+  min-height: 0;
+  padding: 0;
+  background: var(--btn-bg);
+  border: 1px solid var(--btn-border);
+  border-radius: 999px;
+  box-shadow: none;
+  letter-spacing: inherit;
+  transition: background 0.3s;
+}
+
+.home-page .toplink:hover {
+  background: var(--btn-hover-bg);
+  border-color: var(--btn-border);
 }
 
 .toplink-auth {
