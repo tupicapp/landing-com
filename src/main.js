@@ -2,10 +2,10 @@ const IAM_BASE = import.meta.env.VITE_IAM_BASE_URL
 const REALM = import.meta.env.VITE_IAM_REALM
 const CLIENT_ID = import.meta.env.VITE_IAM_CLIENT_ID
 const REDIRECT_URI = import.meta.env.VITE_IAM_REDIRECT_URI
+const ACCOUNT_URL = import.meta.env.VITE_ACCOUNTS_URL
 
 const AUTH_URL = `${IAM_BASE}/realms/${REALM}/protocol/openid-connect/auth`
 const TOKEN_URL = `${IAM_BASE}/realms/${REALM}/protocol/openid-connect/token`
-const ACCOUNT_URL = `${IAM_BASE}/realms/${REALM}/account/`
 
 function randomBase64url(byteLength) {
   const bytes = crypto.getRandomValues(new Uint8Array(byteLength))
@@ -84,15 +84,33 @@ async function handleCallback() {
   window.history.replaceState({}, '', '/')
 }
 
+function syncSystemTheme() {
+  const media = window.matchMedia('(prefers-color-scheme: light)')
+  const applyTheme = () => {
+    document.documentElement.dataset.theme = media.matches ? 'light' : 'dark'
+  }
+
+  applyTheme()
+  media.addEventListener('change', applyTheme)
+}
+
 function renderHeader() {
   const btn = document.getElementById('step-in')
+  if (!btn) return
+
   if (localStorage.getItem('access_token')) {
-    btn.textContent = 'Account'
-    btn.href = ACCOUNT_URL
+    btn.innerHTML = 'Account <span aria-hidden="true">↗</span>'
+    btn.href = ACCOUNT_URL || 'https://accounts.tupic.com'
     btn.target = '_blank'
     btn.rel = 'noopener noreferrer'
+    btn.classList.add('toplink-auth')
     btn.removeEventListener('click', onLoginClick)
   } else {
+    btn.textContent = 'Step In'
+    btn.href = '#'
+    btn.removeAttribute('target')
+    btn.removeAttribute('rel')
+    btn.classList.remove('toplink-auth')
     btn.addEventListener('click', onLoginClick)
   }
 }
@@ -103,6 +121,7 @@ function onLoginClick(e) {
 }
 
 async function init() {
+  syncSystemTheme()
   await handleCallback()
   renderHeader()
 }

@@ -8,6 +8,16 @@ npm install
 npm run dev
 ```
 
+Environment variables:
+
+```bash
+VITE_IAM_BASE_URL=https://iam.tupic.com
+VITE_IAM_REALM=tupic
+VITE_IAM_CLIENT_ID=...
+VITE_IAM_REDIRECT_URI=...
+VITE_ACCOUNTS_URL=https://accounts.tupic.com
+```
+
 ## Build
 
 ```bash

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TUPIC Master Terms and Conditions</title>
+  <meta name="description" content="TUPIC Master Terms and Conditions covering ecosystem services, account use, user content, payments, tokens, liability, and governing law in Dubai, United Arab Emirates.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <script type="module">
+    import '../main.js'
+    import { termsOfServiceHtml } from '../content/terms-of-service.js'
+
+    const termsRoot = document.getElementById('terms-content')
+    const sectionsRoot = document.getElementById('terms-sections')
+    if (termsRoot) {
+      termsRoot.innerHTML = termsOfServiceHtml
+
+      const headings = [...termsRoot.querySelectorAll('h2')]
+      headings.forEach((heading, index) => {
+        heading.id = `section-${index + 1}`
+      })
+
+      if (sectionsRoot) {
+        sectionsRoot.innerHTML = headings
+          .map((heading) => `<a href="#${heading.id}">${heading.textContent}</a>`)
+          .join('')
+      }
+    }
+  </script>
+</head>
+<body class="terms-page antialiased">
+  <div class="page-shell">
+    <div class="glow fixed top-[12rem] left-1/2 -translate-x-1/2 w-[72rem] h-[72rem] pointer-events-none"></div>
+
+    <main class="terms-grid">
+      <div class="terms-topbar fade-0">
+        <a href="/" class="brand-lockup" aria-label="Tupic home">
+          <span class="brand-wordmark">tupic<span class="text-[var(--accent)]">.</span></span>
+        </a>
+        <a id="step-in" href="#" class="toplink font-display text-sm font-medium text-[var(--fg)] no-underline tracking-wide px-[1.1rem] py-[0.45rem] rounded-full">
+          Step In
+        </a>
+      </div>
+
+      <section class="terms-hero fade-1">
+        <div class="terms-card">
+          <div class="terms-kicker">Legal Framework</div>
+          <h1 class="terms-title">Master terms for the full TUPIC ecosystem.</h1>
+          <p class="terms-lead">
+            This page contains the current draft of the TUPIC master terms and conditions, formatted for comfortable reading on desktop and mobile while preserving the source legal structure.
+          </p>
+          <div class="terms-meta">
+            <span>Readable draft</span>
+            <span>22 sections</span>
+            <span>Updated May 2026</span>
+          </div>
+          <div class="terms-pills">
+            <span>Effective copy: May 2026</span>
+            <span>Jurisdiction: Dubai, UAE</span>
+            <span>Scope: TUPIC ecosystem</span>
+          </div>
+        </div>
+
+        <aside class="terms-sidecard fade-2">
+          <div>
+            <h2 class="text-xl mb-3">At a glance</h2>
+            <p>The agreement covers ecosystem-wide use of TUPIC services, including eligibility, account security, user content, payments, tokens, liability limits, and dispute handling.</p>
+          </div>
+          <div>
+            <h2 class="text-xl mb-3">Jump to section</h2>
+            <nav class="terms-sections" id="terms-sections" aria-label="Terms sections"></nav>
+          </div>
+          <div>
+            <h2 class="text-xl mb-3">Questions</h2>
+            <ul>
+              <li><a href="mailto:support@tupic.com">support@tupic.com</a></li>
+              <li><a href="mailto:legal@tupic.com">legal@tupic.com</a></li>
+            </ul>
+          </div>
+        </aside>
+      </section>
+
+      <section class="terms-card terms-copy fade-3" id="terms-content" aria-label="Terms of Service"></section>
+
+      <footer class="terms-footer fade-4">
+        <span>© TUPIC. Legal copy preserved from the source document.</span>
+        <div class="legal-footer-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/">Back to home</a>
+        </div>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
