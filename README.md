@@ -1,3 +1,5 @@
+[![Better Stack Badge](https://uptime.betterstack.com/status-badges/v1/monitor/2oj1p.svg)](https://uptime.betterstack.com/?utm_source=status_badge)
+
 # tupic.com — Landing Page
 
 
