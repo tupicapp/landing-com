@@ -3,7 +3,7 @@ import"./main-DLdIo1ZJ.js";const o=`
 
 <p>These Terms and Conditions (the “Terms”) govern access to and use of the TUPIC ecosystem, including the TUPIC website, platform, applications, products, content, tools, technologies, and related services made available by Mirrage Image It Solutions.</p>
 
-<p>The TUPIC ecosystem may include a number of distinct products, brands, tools, or service lines, including, without limitation, services such as TUPIC Finance, TUPIC Insight, TUPIC Chain, TUPIC Games, TUPIC Tag, TUPIC Pay, TUPIC Live and any other related or future TUPIC services (each a “Service” and together, the “Services”).</p>
+<p>The TUPIC ecosystem may include a number of distinct products, brands, tools, or service lines, including, without limitation, services such as TUPIC Finance, TUPIC Insight, TUPIC Chain, TUPIC Games, TUPIC Moment, TUPIC Pay, TUPIC Live and any other related or future TUPIC services (each a “Service” and together, the “Services”).</p>
 
 <p>These Terms form the master terms applicable across the TUPIC ecosystem. Certain Services may be subject to additional terms, service-specific addenda, product terms, rules, guidelines, policies, or disclosures (each an “Add-On”). Where an Add-On applies to a particular Service, that Add-On forms part of these Terms for that Service. In the event of a conflict between these Terms and an applicable Add-On, the Add-On shall prevail solely with respect to that specific Service.</p>
 
