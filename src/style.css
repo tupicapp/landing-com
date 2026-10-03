@@ -1,5 +1,5 @@
-@import "@tupicapp/web-ui/tokens.css";
-@import "@tupicapp/web-ui/reset.css";
+@import "@tupicapp/web-ui-components/tokens.css";
+@import "@tupicapp/web-ui-components/reset.css";
 @import "tailwindcss";
 
 @theme {
