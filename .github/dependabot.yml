@@ -12,6 +12,11 @@ updates:
       include: "scope"
     groups:
       npm-minor-and-patch:
+        applies-to: version-updates
         update-types:
           - "minor"
           - "patch"
+      npm-security:
+        applies-to: security-updates
+        patterns:
+          - "*"
